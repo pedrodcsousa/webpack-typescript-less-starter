@@ -1,0 +1,27 @@
+{
+  "name": "webpack4-typescript-less-starter",
+  "version": "0.0.1",
+  "private": "true",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "Pedro Sousa",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "css-loader": "^6.0.0",
+    "html-webpack-plugin": "^5.3.2",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "mini-css-extract-plugin": "^2.1.0",
+    "style-loader": "^3.1.0",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.45.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
