@@ -1,9 +1,18 @@
+import {
+  CustomComponents,
+  CustomComponentsMap,
+  initCustomComponents,
+} from "./components";
+import { fetchAllBeers } from "./services/beer.service";
 import "./style.less";
 
-function component() {
-  const element = document.createElement("div");
-  element.innerHTML = "Hello World";
-  return element;
-}
+initCustomComponents();
 
-document.body.appendChild(component());
+fetchAllBeers().then((beers) => {
+  beers.forEach((b) => {
+    const beerLiInstance = new CustomComponentsMap[CustomComponents.BEER_ITEM]({
+      ...b,
+    });
+    document.getElementById("beers").appendChild(beerLiInstance);
+  });
+});
