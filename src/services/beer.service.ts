@@ -8,7 +8,11 @@ interface Beer {
 }
 
 function fetchAllBeers(): Promise<Array<Beer>> {
-  return fetch("https://api.punkapi.com/v2/beers").then((response) => {
+  return fetch("https://api.punkapi.com/v2/beers/", {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((response) => {
     if (!response.ok) {
       throw new Error(response.statusText);
     }

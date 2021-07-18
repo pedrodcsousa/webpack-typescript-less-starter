@@ -1,0 +1,15 @@
+.random-color-generator() {
+  @randomColor: `(Math.random() * 0xffffff<<0) .toString(16) `;
+  @colorHex: e(@randomColor);
+  @color: ~"#@{colorHex}";
+}
+
+@it: 9;
+.bg-loop (@i) when (@i > 0) {
+  .bg@{i} {
+    .random-color-generator();
+    background-color: @color;
+  }
+  .bg-loop(@i - 1);
+}
+.bg-loop (@it);

@@ -28,12 +28,22 @@ module.exports = {
       //   use: [MiniCssExtractPlugin.loader, "css-loader"],
       // },
       {
-        test: /\.less$/i,
+        test: /\.less$/,
         use: [
-          // compiles Less to CSS
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "less-loader",
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+              },
+            },
+          },
         ],
       },
     ],

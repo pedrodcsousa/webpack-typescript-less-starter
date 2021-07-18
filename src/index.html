@@ -3,22 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <title>Hello World</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <section class="beers-container">
       <ul id="beers" class="beers_list">
       </ul>
     </section>
-    
   </body>
 
-  <template id="beer-item">
+  <template id="beer-item-template">
     <li class="beer-item">
       <div class="beer-item__abv-corner"></div>
       <span class="beer-item__abv-value"></span>
       <img class="beer-item__background"></img>
       <span class="beer-item__ibu"></span>
-      <span class="beer-item__title"></span>
+      <span class="beer-item__name"></span>
     </li>
+  </template>
+
+  <template id="beer-modal-template">
+    <div class='beer-modal'>
+      <div class='beer-modal__overlay'></div>
+      <div class='beer-modal__content'>
+        <button class='beer-modal__content__close'>
+          <i class="fa fa-close">
+          </i>
+        </button>
+        <div class='beer-modal__content__badge-and-description'>
+          <div class="beer-modal__content__badge"> 
+            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+              <circle style="fill: rgb(216, 216, 216);" cx="150" cy="150" r="150"></circle>
+              <circle style="fill: rgb(255, 255, 255);" cx="150" cy="150" r="145"></circle>
+              <path style="fill: rgb(216, 216, 216);" transform="matrix(-0.311402, 1.678076, -2.771144, -0.031176, 1818.654663, -273.582123)" d="M 329.243 531.801 A 37.37 37.37 0 0 1 329.243 598.977 A 394.094 394.094 0 0 1 329.243 531.801 Z" bx:shape="crescent 312.861 565.389 37.37 128 0.7 1@288dab06"></path>
+              <text class="badge_ibu" id="modal_ibu" x="22" y="150" style="white-space: pre; fill: rgb(51, 51, 51);"></text>
+              <text class="badge_abv" x="135" y="285" style="white-space: pre; fill: rgb(51, 51, 51);"></text>
+              <image class="badge_img" width="200" height="200" x="50" y="40" >
+              </image>
+            </svg>
+          </div>
+          <p class='beer-modal__content__description'></p>
+        </div>
+        <div class='beer-modal__content__name-and-order'>
+          <span class='beer-modal__content__name'></span>
+          <div class='beer-modal__content__order'>
+            Order
+            <ul class='beer-modal__content__order__list'>
+              <li class='beer-modal__content__order__list__item'>Glass</li>
+              <li class='beer-modal__content__order__list__item'>Can</li>
+              <li class='beer-modal__content__order__list__item'>Box</li>
+            </ul>
+          </select>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="beer-order-quantity">
+    <ul class="beer-order-quantity-list">
+      <li class="beer-order-quantity-list__item">1</li>
+      <li class="beer-order-quantity-list__item">2</li>
+      <li class="beer-order-quantity-list__item">3</li>
+    </ul>
   </template>
 </html>
