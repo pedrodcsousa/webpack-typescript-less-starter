@@ -23,6 +23,9 @@ class BeerItem extends HTMLElement {
     (
       beerClone.querySelector(".beer-item__background") as HTMLImageElement
     ).src = image_url;
+    (
+      beerClone.querySelector(".beer-item__background") as HTMLImageElement
+    ).alt = name;
 
     // Set beer name
     beerClone.querySelector(".beer-item__name").innerHTML = name;

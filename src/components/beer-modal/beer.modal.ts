@@ -88,6 +88,9 @@ class BeerModal extends HTMLElement {
     (
       badgePtr.getElementsByClassName("badge_img")[0] as SVGImageElement
     ).setAttribute("href", this.getAttribute("image_url"));
+    (
+      badgePtr.getElementsByClassName("badge_img")[0] as SVGImageElement
+    ).setAttribute("alt", this.getAttribute("name"));
   }
 
   _buildDropdown() {
